@@ -1,0 +1,28 @@
+@font-face {
+  font-family: stupefaction;
+  src:
+      url('/fonts/stupefaction.ttf')
+      format('truetype');
+  src:
+      url('/fonts/stupefaction.otf')
+      format('opentype');
+}
+
+body {
+  background-color: black;
+}
+
+h1 {
+  color: white;
+  font-size: 72px;
+  text-align: center;
+  font-family: stupefaction;
+}
+
+h2 {
+  color: red;
+  font-size: 38px;
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+}
