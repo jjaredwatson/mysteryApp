@@ -1,0 +1,23 @@
+{
+  "name": "mysteryApp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jjaredwatson/mysteryApp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jjaredwatson/mysteryApp/issues"
+  },
+  "homepage": "https://github.com/jjaredwatson/mysteryApp#readme",
+  "dependencies": {
+    "tailwindcss": "^1.7.3"
+  }
+}
