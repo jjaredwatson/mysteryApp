@@ -1,7 +1,7 @@
-const textElement = document.getElementById('text')
-const optionButtonsElement = document.getElementById('option-buttons')
+const textElement = document.getElementById('text');
+const optionButtonsElement = document.getElementById('option-buttons');
 
-let state = {}
+let state = {};
 
 function startGame() {
     state = {}
@@ -10,7 +10,24 @@ function startGame() {
 
 function showTextNode(textNodeIndex) {
    const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
-   textElement.innerText = textNode.text
+   textElement.innerHTML = textNode.text;
+   while (optionButtonsElement.firstChild){
+       optionButtonsElement.removeChild(optionButtonsElement.firstChild)
+   }
+   textNode.options.forEach(option => {
+       if (showOption(option)) {
+           const button = document.createElement('button')
+           button.innerText = option.text
+           button.classList.add('btn')
+           button.addEventListener('click', () => selectOption(option))
+           optionButtonsElement.appendChild(button)
+       }
+
+   })
+}
+
+function showOption(option) {
+    return true;
 }
 
 function selectOption(option) {
@@ -20,13 +37,11 @@ function selectOption(option) {
 const textNodes = [
     {
         id: 1,
-        text: "A body has been found at the library and the chief wants you to solve the case. Are you up for it, detective?",
+        text: "A body has been found in the town library and the chief wants you to solve the case. Are you up for it, detective?",
         options: [
             {
                 text: "I'm up for it.",
-                setState: {
-                    takeCase: true
-                    },
+                setState: { takeCase: true },
                 nextText: 2
             },
             {
